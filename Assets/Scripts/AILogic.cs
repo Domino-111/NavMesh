@@ -24,7 +24,7 @@ public class AILogic : MonoBehaviour
     
     void Update()
     {
-        if (door.isOpen == false && key != null)
+        if (door.state == MoveDoor.DoorStates.Locked && key != null)
         {
             _agent.destination = key.position;
         }
